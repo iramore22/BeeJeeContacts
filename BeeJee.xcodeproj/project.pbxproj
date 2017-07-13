@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75DED667BE29AD5310DE96DF /* Pods_BeeJee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE06E00812FB8B41E5094D9 /* Pods_BeeJee.framework */; };
 		D34150281F08E4C700B9EAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34150271F08E4C700B9EAFC /* AppDelegate.swift */; };
 		D341502A1F08E4C700B9EAFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34150291F08E4C700B9EAFC /* ViewController.swift */; };
 		D341502D1F08E4C700B9EAFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D341502B1F08E4C700B9EAFC /* Main.storyboard */; };
 		D34150301F08E4C700B9EAFC /* BeeJee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D341502E1F08E4C700B9EAFC /* BeeJee.xcdatamodeld */; };
 		D34150321F08E4C700B9EAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34150311F08E4C700B9EAFC /* Assets.xcassets */; };
 		D34150351F08E4C700B9EAFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34150331F08E4C700B9EAFC /* LaunchScreen.storyboard */; };
+		D341503E1F08E91400B9EAFC /* Contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = D341503D1F08E91400B9EAFC /* Contacts.json */; };
+		D34150421F0940B700B9EAFC /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34150411F0940B700B9EAFC /* ViewControllerHelper.swift */; };
+		D34150451F0975C000B9EAFC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34150441F0975C000B9EAFC /* ContactViewController.swift */; };
+		D34150491F098F7600B9EAFC /* ContactViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34150481F098F7600B9EAFC /* ContactViewControllerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7855B15F41D05560AD930684 /* Pods-BeeJee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeJee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeeJee/Pods-BeeJee.debug.xcconfig"; sourceTree = "<group>"; };
+		C76BF206A4A31CCB1235ED45 /* Pods-BeeJee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeJee.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeJee/Pods-BeeJee.release.xcconfig"; sourceTree = "<group>"; };
 		D34150241F08E4C700B9EAFC /* BeeJee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeJee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34150271F08E4C700B9EAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D34150291F08E4C700B9EAFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		D34150311F08E4C700B9EAFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D34150341F08E4C700B9EAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34150361F08E4C700B9EAFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D341503D1F08E91400B9EAFC /* Contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contacts.json; sourceTree = "<group>"; };
+		D34150411F0940B700B9EAFC /* ViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
+		D34150441F0975C000B9EAFC /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		D34150481F098F7600B9EAFC /* ContactViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewControllerHelper.swift; sourceTree = "<group>"; };
+		EDE06E00812FB8B41E5094D9 /* Pods_BeeJee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeJee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DED667BE29AD5310DE96DF /* Pods_BeeJee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5278BF7A4470E58EDB645F7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7855B15F41D05560AD930684 /* Pods-BeeJee.debug.xcconfig */,
+				C76BF206A4A31CCB1235ED45 /* Pods-BeeJee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D341501B1F08E4C700B9EAFC = {
 			isa = PBXGroup;
 			children = (
 				D34150261F08E4C700B9EAFC /* BeeJee */,
 				D34150251F08E4C700B9EAFC /* Products */,
+				5278BF7A4470E58EDB645F7D /* Pods */,
+				DEE9F7EA7C9FB785F485651A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +80,59 @@
 		D34150261F08E4C700B9EAFC /* BeeJee */ = {
 			isa = PBXGroup;
 			children = (
-				D34150271F08E4C700B9EAFC /* AppDelegate.swift */,
+				D34150471F098D2A00B9EAFC /* Misc */,
+				D34150461F098D1D00B9EAFC /* Helpers */,
+				D34150431F09759D00B9EAFC /* Controllers */,
+				D341503C1F08E76800B9EAFC /* Json */,
+			);
+			path = BeeJee;
+			sourceTree = "<group>";
+		};
+		D341503C1F08E76800B9EAFC /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				D341503D1F08E91400B9EAFC /* Contacts.json */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
+		D34150431F09759D00B9EAFC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				D34150291F08E4C700B9EAFC /* ViewController.swift */,
+				D34150441F0975C000B9EAFC /* ContactViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D34150461F098D1D00B9EAFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D34150411F0940B700B9EAFC /* ViewControllerHelper.swift */,
+				D34150481F098F7600B9EAFC /* ContactViewControllerHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D34150471F098D2A00B9EAFC /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				D34150271F08E4C700B9EAFC /* AppDelegate.swift */,
 				D341502B1F08E4C700B9EAFC /* Main.storyboard */,
 				D34150311F08E4C700B9EAFC /* Assets.xcassets */,
 				D34150331F08E4C700B9EAFC /* LaunchScreen.storyboard */,
 				D34150361F08E4C700B9EAFC /* Info.plist */,
 				D341502E1F08E4C700B9EAFC /* BeeJee.xcdatamodeld */,
 			);
-			path = BeeJee;
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		DEE9F7EA7C9FB785F485651A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDE06E00812FB8B41E5094D9 /* Pods_BeeJee.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D34150391F08E4C700B9EAFC /* Build configuration list for PBXNativeTarget "BeeJee" */;
 			buildPhases = (
+				68C66B45A89C508312E124CE /* [CP] Check Pods Manifest.lock */,
 				D34150201F08E4C700B9EAFC /* Sources */,
 				D34150211F08E4C700B9EAFC /* Frameworks */,
 				D34150221F08E4C700B9EAFC /* Resources */,
+				68C04292EDBC0EAAFE08B68E /* [CP] Embed Pods Frameworks */,
+				776AE61C0FD77DE73261E074 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D341503E1F08E91400B9EAFC /* Contacts.json in Resources */,
 				D34150351F08E4C700B9EAFC /* LaunchScreen.storyboard in Resources */,
 				D34150321F08E4C700B9EAFC /* Assets.xcassets in Resources */,
 				D341502D1F08E4C700B9EAFC /* Main.storyboard in Resources */,
@@ -135,14 +207,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68C04292EDBC0EAAFE08B68E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeeJee/Pods-BeeJee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C66B45A89C508312E124CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		776AE61C0FD77DE73261E074 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeeJee/Pods-BeeJee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D34150201F08E4C700B9EAFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34150421F0940B700B9EAFC /* ViewControllerHelper.swift in Sources */,
 				D34150301F08E4C700B9EAFC /* BeeJee.xcdatamodeld in Sources */,
 				D341502A1F08E4C700B9EAFC /* ViewController.swift in Sources */,
 				D34150281F08E4C700B9EAFC /* AppDelegate.swift in Sources */,
+				D34150451F0975C000B9EAFC /* ContactViewController.swift in Sources */,
+				D34150491F098F7600B9EAFC /* ContactViewControllerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +384,7 @@
 		};
 		D341503A1F08E4C700B9EAFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7855B15F41D05560AD930684 /* Pods-BeeJee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 83H63AD9J8;
@@ -274,6 +398,7 @@
 		};
 		D341503B1F08E4C700B9EAFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76BF206A4A31CCB1235ED45 /* Pods-BeeJee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 83H63AD9J8;
@@ -304,6 +429,7 @@
 				D341503B1F08E4C700B9EAFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

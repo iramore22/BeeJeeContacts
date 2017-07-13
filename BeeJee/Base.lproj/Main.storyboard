@@ -1,26 +1,245 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4CW-Nl-H2T">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeeJee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIp-Ub-PlF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" id="lVN-k1-QSy" customClass="ContactTableCell" customModule="BeeJee" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lVN-k1-QSy" id="JOy-9G-Q8L">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QMV-tz-lxM" kind="show" identifier="ShowContact" id="XLG-AU-yoE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ipx-0o-LlO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gIp-Ub-PlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J2S-co-hkk"/>
+                            <constraint firstItem="gIp-Ub-PlF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="dqx-Ek-iB3"/>
+                            <constraint firstItem="gIp-Ub-PlF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ecP-YT-x4a"/>
+                            <constraint firstItem="gIp-Ub-PlF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="x24-pM-gdE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="thn-Tr-Bid">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sag-5Z-NFI">
+                            <connections>
+                                <segue destination="XDS-IT-2Y4" kind="presentation" identifier="AddContact" id="mmy-DL-A3R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gIp-Ub-PlF" id="BDB-GI-sNZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--New Contact-->
+        <scene sceneID="ZPd-bx-JPB">
+            <objects>
+                <viewController id="QMV-tz-lxM" customClass="ContactViewController" customModule="BeeJee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="leX-0b-733"/>
+                        <viewControllerLayoutGuide type="bottom" id="RST-3Q-wtC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sik-Ok-IFs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wje-gD-EeH">
+                                <rect key="frame" x="16" y="148" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFu-3o-qSr">
+                                <rect key="frame" x="16" y="221.5" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street line 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moz-tE-KQa">
+                                <rect key="frame" x="16" y="295" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street line 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9c-pr-TYE">
+                                <rect key="frame" x="16" y="325" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Few-Av-OQ0">
+                                <rect key="frame" x="16" y="355" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8l-UC-tso">
+                                <rect key="frame" x="16" y="198" width="288" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjN-py-4DU">
+                                <rect key="frame" x="16" y="271.5" width="288" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4U-x7-ARM">
+                                <rect key="frame" x="16" y="118" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postal code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFp-Wz-mAN">
+                                <rect key="frame" x="16" y="385" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4j-f2-PQK">
+                                <rect key="frame" x="16" y="415" width="288" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="aFp-Wz-mAN" secondAttribute="leading" id="2Kd-gq-CuB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="moz-tE-KQa" secondAttribute="trailing" id="2aY-B8-7VJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O4j-f2-PQK" secondAttribute="leading" id="3Ak-Bx-Dcm"/>
+                            <constraint firstItem="d8l-UC-tso" firstAttribute="trailing" secondItem="wje-gD-EeH" secondAttribute="trailing" id="5Nd-2m-Q0n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wje-gD-EeH" secondAttribute="trailing" id="5qo-Bw-p0d"/>
+                            <constraint firstItem="d8l-UC-tso" firstAttribute="leading" secondItem="wje-gD-EeH" secondAttribute="leading" id="AwK-st-l1k"/>
+                            <constraint firstItem="wje-gD-EeH" firstAttribute="top" secondItem="b4U-x7-ARM" secondAttribute="bottom" id="Dag-1u-WrL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FFu-3o-qSr" secondAttribute="trailing" id="EBK-5O-amt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O4j-f2-PQK" secondAttribute="trailing" id="Kl9-Co-3hg"/>
+                            <constraint firstItem="FFu-3o-qSr" firstAttribute="top" secondItem="d8l-UC-tso" secondAttribute="bottom" id="MWC-lG-sfz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Few-Av-OQ0" secondAttribute="trailing" id="UbF-Qd-QNM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="moz-tE-KQa" secondAttribute="leading" id="Ug9-3p-AGw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FFu-3o-qSr" secondAttribute="leading" id="WFu-DC-LG8"/>
+                            <constraint firstItem="d8l-UC-tso" firstAttribute="top" secondItem="wje-gD-EeH" secondAttribute="bottom" constant="20" id="WkY-p0-Gt3"/>
+                            <constraint firstItem="M9c-pr-TYE" firstAttribute="top" secondItem="moz-tE-KQa" secondAttribute="bottom" id="XVp-wH-boV"/>
+                            <constraint firstItem="moz-tE-KQa" firstAttribute="top" secondItem="xjN-py-4DU" secondAttribute="bottom" id="XvN-6s-soj"/>
+                            <constraint firstItem="O4j-f2-PQK" firstAttribute="top" secondItem="aFp-Wz-mAN" secondAttribute="bottom" id="bLA-hI-J0u"/>
+                            <constraint firstItem="aFp-Wz-mAN" firstAttribute="top" secondItem="Few-Av-OQ0" secondAttribute="bottom" id="fWu-HH-Ona"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xjN-py-4DU" secondAttribute="trailing" id="fgJ-4c-wuc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aFp-Wz-mAN" secondAttribute="trailing" id="fpe-PZ-TYz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xjN-py-4DU" secondAttribute="leading" id="iJ7-kW-q2K"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wje-gD-EeH" secondAttribute="leading" id="kCe-hk-Bof"/>
+                            <constraint firstItem="wje-gD-EeH" firstAttribute="top" secondItem="leX-0b-733" secondAttribute="bottom" constant="84" id="kdr-mI-SoW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Few-Av-OQ0" secondAttribute="leading" id="lZc-Xf-Dnl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="M9c-pr-TYE" secondAttribute="leading" id="lrk-bD-CPS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b4U-x7-ARM" secondAttribute="trailing" id="mpg-NH-RRp"/>
+                            <constraint firstItem="Few-Av-OQ0" firstAttribute="top" secondItem="M9c-pr-TYE" secondAttribute="bottom" id="qYm-u4-9XR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M9c-pr-TYE" secondAttribute="trailing" id="tIo-IN-I9C"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="b4U-x7-ARM" secondAttribute="leading" id="vqY-Go-MlR"/>
+                            <constraint firstItem="xjN-py-4DU" firstAttribute="top" secondItem="FFu-3o-qSr" secondAttribute="bottom" constant="20" id="xuZ-fM-BjB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Contact" id="pNa-hP-KeS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DK4-lM-w8C">
+                            <connections>
+                                <action selector="cancel:" destination="QMV-tz-lxM" id="MV8-XN-K11"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="myM-Kv-aPs">
+                            <connections>
+                                <segue destination="bee-Y7-4bk" kind="unwind" unwindAction="unwindToContactListWithSender:" id="09m-If-e5G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityTF" destination="Few-Av-OQ0" id="40G-6p-H5T"/>
+                        <outlet property="firstnameTF" destination="wje-gD-EeH" id="YKW-hR-yGg"/>
+                        <outlet property="lastnameTF" destination="b4U-x7-ARM" id="3Qs-db-Srd"/>
+                        <outlet property="phonenumberTF" destination="FFu-3o-qSr" id="SPS-us-uI8"/>
+                        <outlet property="saveBtn" destination="myM-Kv-aPs" id="pHy-fc-xXf"/>
+                        <outlet property="stateTF" destination="O4j-f2-PQK" id="Mwd-Cu-11o"/>
+                        <outlet property="streetLine1TF" destination="moz-tE-KQa" id="KNu-Pr-0Bp"/>
+                        <outlet property="streetLine2TF" destination="M9c-pr-TYE" id="9tw-dt-6Rq"/>
+                        <outlet property="zipCodeTF" destination="aFp-Wz-mAN" id="AmS-ai-NNU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pl6-gi-6PD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bee-Y7-4bk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2938.125" y="136.26760563380282"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9KP-Q3-NL7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4CW-Nl-H2T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Twm-gb-zbv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0dU-G3-Few"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPm-0K-bZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TQu-3B-pYm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XDS-IT-2Y4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Yk-OJ-hE2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QMV-tz-lxM" kind="relationship" relationship="rootViewController" id="qHG-N8-Ho3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1l-3f-Pud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="479"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XLG-AU-yoE"/>
+    </inferredMetricsTieBreakers>
 </document>
